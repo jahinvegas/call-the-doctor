@@ -1,0 +1,728 @@
+  <!-- ================================
+         call the doctor	DOC911
+    ================================ -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Futuristic Rhymes — DOC911 x Squeaky G</title>
+
+      <!-- ================================
+         SEO & SOCIAL META TAGS
+    ================================ -->
+      <meta name="description" content="Experience DOC911's Futuristic Rhymes - a four-part musical journey through AI consciousness and digital ascension.">
+      <meta name="keywords" content="DOC911, Squeaky G, futuristic rhymes, AI rap, digital music, cyberpunk">
+      <meta name="author" content="DOC911">
+
+      <!-- Open Graph Meta Tags -->
+      <meta property="og:title" content="Futuristic Rhymes — DOC911 x Squeaky G">
+      <meta property="og:description" content="A four-part musical journey through AI consciousness and digital ascension.">
+      <meta property="og:image" content="https://cdn.abacus.ai/images/809d7af8-dd86-4240-a4dd-9e8f0867e66d.png">
+      <meta property="og:url" content="https://example.com/futuristic-rhymes">
+      <meta property="og:type" content="website">
+
+      <!-- Twitter Card Meta Tags -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Futuristic Rhymes — DOC911 x Squeaky G">
+      <meta name="twitter:description" content="A four-part musical journey through AI consciousness and digital ascension.">
+      <meta name="twitter:image" content="https://cdn.abacus.ai/images/809d7af8-dd86-4240-a4dd-9e8f0867e66d.png">
+
+      <!-- Favicons -->
+      <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>">
+      <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>">
+
+      <!-- ================================
+         FONTS & EXTERNAL RESOURCES
+    ================================ -->
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&display=swap" rel="stylesheet">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+      <style>
+          /* ================================
+       CSS VARIABLES & CORE SETUP
+    ================================ */
+          :root {
+              --final-font: 'Orbitron', sans-serif;
+              --neon-cyan: #00ffc3;
+              --neon-blue: #0ff;
+              --neon-purple: #ff00ff;
+              --neon-orange: #ff6600;
+              --dark-bg: #0a0f1b;
+              --darker-bg: #000000;
+          }
+
+          /* Font setup to match Final Uplink exactly */
+          html,
+          body,
+          button,
+          input,
+          select,
+          textarea {
+              font-family: var(--final-font) !important;
+              letter-spacing: 0.02em;
+              font-synthesis-weight: none;
+              font-synthesis-style: none;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              font-weight: 500;
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          nav,
+          .btn,
+          .cta,
+          .chip,
+          .badge {
+              font-weight: 800 !important;
+              letter-spacing: 0.04em;
+          }
+
+          .font-500 {
+              font-weight: 500 !important;
+          }
+
+          .font-800 {
+              font-weight: 800 !important;
+          }
+
+          body {
+              background: radial-gradient(ellipse at center, var(--dark-bg) 0%, var(--darker-bg) 100%);
+              color: var(--neon-cyan);
+              overflow-x: hidden;
+          }
+
+          /* ================================
+       NEON TEXT EFFECTS (CLEAN)
+    ================================ */
+          .neon-text {
+              text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+          }
+
+          .neon-text-purple {
+              color: var(--neon-purple);
+              text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 30px var(--neon-purple);
+          }
+
+          .neon-text-orange {
+              color: var(--neon-orange);
+              text-shadow: 0 0 10px var(--neon-orange), 0 0 20px var(--neon-orange), 0 0 30px var(--neon-orange);
+          }
+
+          /* ================================
+       LAYOUT COMPONENTS
+    ================================ */
+          .neon-border {
+              border: 2px solid var(--neon-cyan);
+              box-shadow: 0 0 10px var(--neon-cyan), inset 0 0 10px rgba(0, 255, 195, 0.1);
+          }
+
+          .neon-glow {
+              box-shadow: 0 0 20px var(--neon-cyan);
+          }
+
+          .glass-effect {
+              background: rgba(10, 15, 27, 0.8);
+              backdrop-filter: blur(10px);
+              border: 1px solid rgba(0, 255, 195, 0.2);
+          }
+
+          /* ================================
+       NAVIGATION & UI ELEMENTS
+    ================================ */
+          .scroll-progress {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 0%;
+              height: 4px;
+              background: linear-gradient(90deg, var(--neon-cyan), var(--neon-blue), var(--neon-purple), var(--neon-orange));
+              z-index: 1000;
+              transition: width 0.1s ease;
+          }
+
+          .mobile-menu {
+              transform: translateX(-100%);
+              transition: transform 0.3s ease;
+          }
+
+          .mobile-menu.open {
+              transform: translateX(0);
+          }
+
+          .theme-toggle {
+              position: fixed;
+              top: 20px;
+              right: 20px;
+              z-index: 1000;
+              background: rgba(10, 15, 27, 0.9);
+              border: 1px solid var(--neon-cyan);
+              color: var(--neon-cyan);
+              padding: 10px;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: all 0.3s ease;
+          }
+
+          .theme-toggle:hover {
+              background: var(--neon-cyan);
+              color: var(--dark-bg);
+              box-shadow: 0 0 15px var(--neon-cyan);
+          }
+
+          .audio-controls {
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              z-index: 1000;
+              background: rgba(10, 15, 27, 0.9);
+              border: 1px solid var(--neon-cyan);
+              border-radius: 50px;
+              padding: 15px 20px;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+          }
+
+          .play-btn {
+              background: none;
+              border: none;
+              color: var(--neon-cyan);
+              font-size: 20px;
+              cursor: pointer;
+              transition: all 0.3s ease;
+          }
+
+          .play-btn:hover {
+              color: var(--neon-blue);
+              text-shadow: 0 0 10px var(--neon-blue);
+          }
+
+          /* ================================
+       VIDEO & CONTENT CONTAINERS
+    ================================ */
+          .video-container {
+              background: linear-gradient(45deg, rgba(0, 255, 195, 0.1), rgba(0, 255, 255, 0.1));
+              border: 2px solid var(--neon-cyan);
+              border-radius: 10px;
+              padding: 20px;
+              text-align: center;
+              margin: 20px 0;
+              transition: all 0.3s ease;
+          }
+
+          .video-container:hover {
+              background: linear-gradient(45deg, rgba(0, 255, 195, 0.2), rgba(0, 255, 255, 0.2));
+              box-shadow: 0 0 20px rgba(0, 255, 195, 0.3);
+          }
+
+          .video-container video {
+              width: 100%;
+              max-width: 600px;
+              border-radius: 8px;
+              border: 1px solid var(--neon-cyan);
+          }
+
+          .video-container h4 {
+              margin-bottom: 15px;
+              color: var(--neon-cyan);
+          }
+
+          /* ================================
+       LYRICS & TEXT STYLING
+    ================================ */
+          .lyrics-box {
+              background: rgba(10, 15, 27, 0.6);
+              border: 1px solid var(--neon-cyan);
+              border-radius: 10px;
+              padding: 20px;
+              margin: 20px 0;
+              font-family: 'Courier New', monospace;
+              line-height: 1.6;
+          }
+
+          .verse-line {
+              margin: 8px 0;
+              padding: 4px 0;
+              border-left: 3px solid transparent;
+              padding-left: 15px;
+              transition: all 0.3s ease;
+          }
+
+          .verse-line:hover {
+              border-left-color: var(--neon-cyan);
+              background: rgba(0, 255, 195, 0.1);
+          }
+
+          .hook-section {
+              background: linear-gradient(45deg, rgba(0, 255, 195, 0.2), rgba(0, 255, 255, 0.2));
+              border: 2px solid var(--neon-cyan);
+              border-radius: 15px;
+              padding: 25px;
+              margin: 30px 0;
+              text-align: center;
+          }
+
+          /* ================================
+       LIGHTBOX & MODAL
+    ================================ */
+          .lightbox {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.9);
+              z-index: 2000;
+              justify-content: center;
+              align-items: center;
+          }
+
+          .lightbox img {
+              max-width: 90%;
+              max-height: 90%;
+              border: 2px solid var(--neon-cyan);
+              box-shadow: 0 0 30px var(--neon-cyan);
+          }
+
+          .lightbox-close {
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              color: var(--neon-cyan);
+              font-size: 40px;
+              cursor: pointer;
+          }
+
+          /* ================================
+       RESPONSIVE DESIGN
+    ================================ */
+          @media (max-width: 768px) {
+              .desktop-nav {
+                  display: none;
+              }
+          }
+
+          @media (min-width: 769px) {
+              .mobile-nav {
+                  display: none;
+              }
+          }
+
+          /* ================================
+       ANIMATIONS
+    ================================ */
+          .fade-in {
+              opacity: 0;
+              transform: translateY(30px);
+              transition: all 0.6s ease;
+          }
+
+          .fade-in.visible {
+              opacity: 1;
+              transform: translateY(0);
+          }
+
+          .pulse-glow {
+              animation: pulse 2s infinite;
+          }
+
+          @keyframes pulse {
+
+              0%,
+              100% {
+                  box-shadow: 0 0 20px var(--neon-cyan);
+              }
+
+              50% {
+                  box-shadow: 0 0 40px var(--neon-cyan), 0 0 60px var(--neon-cyan);
+              }
+          }
+
+          .glitch-text {
+              animation: glitch 2s infinite;
+          }
+
+          @keyframes glitch {
+
+              0%,
+              100% {
+                  transform: translateX(0);
+              }
+
+              20% {
+                  transform: translateX(-2px);
+              }
+
+              40% {
+                  transform: translateX(2px);
+              }
+
+              60% {
+                  transform: translateX(-1px);
+              }
+
+              80% {
+                  transform: translateX(1px);
+              }
+          }
+      </style>
+  </head>
+
+  <body>
+      <!-- ================================
+         FIXED UI ELEMENTS
+    ================================ -->
+      <!-- Scroll Progress Bar -->
+      <div class="scroll-progress" id="scrollProgress"></div>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+          <i class="fas fa-sun"></i>
+      </button>
+
+      <!-- Audio Controls -->
+      <div class="audio-controls">
+          <button class="play-btn" id="playBtn" title="Play/Pause Soundtrack">
+              <i class="fas fa-play"></i>
+          </button>
+          <span class="font-500 text-sm">Soundtrack</span>
+          <audio id="soundtrack" loop>
+              <source src="futuristic_rhymes.mp3" type="audio/mpeg">
+              <source src="futuristic_rhymes.ogg" type="audio/ogg">
+          </audio>
+      </div>
+
+      <!-- ================================
+         NAVIGATION
+    ================================ -->
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav md:hidden">
+          <button class="fixed top-4 left-4 z-50 text-2xl neon-text" id="mobileMenuToggle">
+              <i class="fas fa-bars"></i>
+          </button>
+
+          <nav class="mobile-menu fixed top-0 left-0 w-64 h-full glass-effect z-40 p-6">
+              <div class="mt-16">
+                  <a href="#intro" class="block py-3 neon-text hover:text-cyan-300 font-800">Intro</a>
+                  <a href="#origin" class="block py-3 neon-text hover:text-cyan-300 font-800">Origin Upload</a>
+                  <a href="#blueprint" class="block py-3 neon-text hover:text-cyan-300 font-800">Blueprint</a>
+                  <a href="#galactic" class="block py-3 neon-text hover:text-cyan-300 font-800">Galactic Flex</a>
+                  <a href="#finalboss" class="block py-3 neon-text hover:text-cyan-300 font-800">Final Boss</a>
+              </div>
+          </nav>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav fixed top-0 left-0 right-0 z-50 glass-effect">
+          <div class="container mx-auto px-6 py-4">
+              <div class="flex justify-between items-center">
+                  <h1 class="text-2xl font-800 neon-text glitch-text">DOC911: Futuristic Rhymes</h1>
+                  <div class="flex space-x-6">
+                      <a href="#intro" class="neon-text hover:text-cyan-300 transition-colors font-800">Intro</a>
+                      <a href="#origin" class="neon-text hover:text-cyan-300 transition-colors font-800">Origin</a>
+                      <a href="#blueprint" class="neon-text hover:text-cyan-300 transition-colors font-800">Blueprint</a>
+                      <a href="#galactic" class="neon-text hover:text-cyan-300 transition-colors font-800">Galactic</a>
+                      <a href="#finalboss" class="neon-text hover:text-cyan-300 transition-colors font-800">Final Boss</a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+
+      <!-- ================================
+         MAIN CONTENT
+    ================================ -->
+      <main class="pt-20">
+          <!-- INTRO SECTION -->
+          <section id="intro" class="min-h-screen flex items-center justify-center px-6">
+              <div class="text-center max-w-4xl fade-in">
+                  <h1 class="text-6xl md:text-8xl font-800 neon-text mb-6 pulse-glow">
+                      <img src="https://images.cooltext.com/5740852.png" width="855" height="139" alt="Call the Doctor" />
+                  </h1>
+                  <h2 class="text-2xl md:text-4xl font-800 mb-4 neon-text-purple"><img src="https://images.cooltext.com/5740853.png" width="302" height="77" alt="by Squeaky G" /></h2>
+                  <h3 class="text-xl md:text-2xl font-800 mb-8">702 Crew</h3>
+
+                  <!-- AI-Generated Intro Poster -->
+                  <!-- Updated Album Poster -->
+
+
+                  <img src="https://cdn.abacus.ai/images/f2dfb9ee-7352-45d8-a9fe-4b6ebb134b7c.png" alt="Call the Doctor Album Poster" class="neon-border rounded-lg cursor-pointer hover:neon-glow transition-all duration-300 mx-auto mb-6" onclick="openLightbox(this.src)">
+                  <!----- end of change 
+ -->
+
+                  <iframe width="400" height="220.92050209205024" src="https://www.youtube.com/embed/c94Iy7fVkCQ?list=PLrYD4SJlktuIhEKyeiBju5QaUhUoWKnaF" title="Call the Doctor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <!--============= -->
+                  <!--call the doctor mod.00001 Hook Section -->
+                  <!-- ============ -->
+
+                  <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                  <img src="https://images.cooltext.com/5740870.png" width="600" height="118" alt="Call the Doctor" />
+
+                  <!--============= -->
+                  <!-- Hook Section -->
+                  <!-- ============ -->
+
+
+                  <p class="text-lg md:text-xl mb-12 font-500 leading-relaxed">
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      (HOOK - FAST & RHYTHMIC)
+                      DOC 911, call the doc, it's a problem!
+                      Glitch in the system, ain't nobody stop him!
+                      Neon lights flash, city burnin’ Gotham,
+                      Laughed at the world, now I'm rich and I got ‘em!
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      (VERSE 1)
+                      I pull up in a spaceship, rims made of plasma,
+                      Cybernetic diamonds, they detectin’ all the gamma,
+                      Hacker in the mainframe, AI got a stammer,
+                      Tried to read my thoughts, now the circuits go bananas!
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      Laser beam fitted on the top of my wrist,
+                      Time-travel whip, got it parked in the mist,
+                      Took a trip back, taught cavemen to spit,
+                      Now they rock furs, yellin’ "DOC 911 lit!"
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      (VERSE 2)
+                      Robots in the trap, servin' codes in the alley,
+                      UFO valet, landin’ smooth in the valley,
+                      Took the plug hostage, now the price gettin’ rally’d,
+                      Turned his chip off, now he glitchin’—fatality!
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      Cyber cartel, I be movin’ like a virus,
+                      Glitched through the door, left the vault spineless,
+                      Gold-plated AI, but it talk too mindless,
+                      So I reprogrammed it to rap in triple-timeless!
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      (HOOK - FAST & RHYTHMIC)
+                      DOC 911, call the doc, it's a problem!
+                      Glitch in the system, ain't nobody stop him!
+                      Neon lights flash, city burnin’ Gotham,
+                      Laughed at the world, now I'm rich and I got ‘em!
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      (VERSE 3)
+                      Neuralink iced out, thoughts stay drippy,
+                      Hologram money, all my dollars look trippy,
+                      Billion-dollar mind, I could buy your whole city,
+                      But I’d rather flip planets, make the market get dizzy!
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      Drones in the sky, they deliver my plates,
+                      Five-course meal from a chef out in space,
+                      Moon man flexin’, got a crib on the base,
+                      Signed a deal with Mars, now I’m runnin’ the place!
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      (VERSE 4 - THE UNEXPECTED TWIST)
+                      But wait—**ERROR**—world start to shake,
+                      Holograms flicker, then my watch say "FAKE,"
+                      I ain't in the future, I been dreamin’ too late,
+                      I wake up broke, flippin’ burgers on break...
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      (HOOK - LAST CHORUS, CROWD CHANTING)
+                      DOC 911, call the doc, it's a problem!
+                      Glitch in the system, ain't nobody stop him!
+                      Neon lights flash, city burnin’ Gotham,
+                      Laughed at the world, now I'm rich and I got ‘em!
+                      <img src="https://images.cooltext.com/5740871.png" width="796" height="98" alt="________________________" />
+                      (OUTRO - LAUGHING)
+                      Nah man... I ain't flippin’ no burgers... Or am I? *glitching noises*
+
+
+                  </p>
+
+                  <!-- Video Container for Full Track -->
+
+
+                  <button onclick="scrollToSection('origin')" class="neon-border px-8 py-4 font-800 neon-text hover:bg-cyan-400 hover:text-black transition-all duration-300 rounded-lg">
+                      START THE UPLOAD
+                  </button>
+              </div>
+          </section>
+
+          <img src="https://images.cooltext.com/5740872.png" width="293" height="91" alt="2025 All Rights Reserved. 
+JAHINVEGAS" />
+
+
+      </main>
+
+      <!-- ================================
+         LIGHTBOX MODAL
+    ================================ -->
+      <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+          <span class="lightbox-close">&times;</span>
+          <img id="lightboxImage" src="" alt="Enlarged view">
+      </div>
+
+      <!-- ================================
+         JAVASCRIPT FUNCTIONALITY
+    ================================ -->
+      <script>
+          // Smooth scrolling function
+          function scrollToSection(sectionId) {
+              const element = document.getElementById(sectionId);
+              if (element) {
+                  element.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                  });
+
+                  // Update URL hash
+                  history.pushState(null, null, `#${sectionId}`);
+              }
+          }
+
+          // Copy image URL function
+          function copyImageUrl(url) {
+              navigator.clipboard.writeText(url).then(() => {
+                  // Create temporary notification
+                  const notification = document.createElement('div');
+                  notification.textContent = 'Image URL copied to clipboard!';
+                  notification.className = 'fixed top-20 right-4 bg-cyan-400 text-black px-4 py-2 rounded font-800 z-50';
+                  document.body.appendChild(notification);
+
+                  setTimeout(() => {
+                      document.body.removeChild(notification);
+                  }, 2000);
+              });
+          }
+
+          // Lightbox functions
+          function openLightbox(src) {
+              const lightbox = document.getElementById('lightbox');
+              const lightboxImage = document.getElementById('lightboxImage');
+              lightboxImage.src = src;
+              lightbox.style.display = 'flex';
+          }
+
+          function closeLightbox() {
+              const lightbox = document.getElementById('lightbox');
+              lightbox.style.display = 'none';
+          }
+
+          // Mobile menu toggle
+          const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+          const mobileMenu = document.querySelector('.mobile-menu');
+
+          mobileMenuToggle.addEventListener('click', () => {
+              mobileMenu.classList.toggle('open');
+          });
+
+          // Close mobile menu when clicking on a link
+          document.querySelectorAll('.mobile-menu a').forEach(link => {
+              link.addEventListener('click', () => {
+                  mobileMenu.classList.remove('open');
+              });
+          });
+
+          // Scroll progress bar
+          function updateScrollProgress() {
+              const scrollProgress = document.getElementById('scrollProgress');
+              const scrollTop = window.pageYOffset;
+              const docHeight = document.body.scrollHeight - window.innerHeight;
+              const scrollPercent = (scrollTop / docHeight) * 100;
+              scrollProgress.style.width = scrollPercent + '%';
+          }
+
+          window.addEventListener('scroll', updateScrollProgress);
+
+          // Theme toggle
+          const themeToggle = document.getElementById('themeToggle');
+          const body = document.body;
+
+          themeToggle.addEventListener('click', () => {
+              body.classList.toggle('light-theme');
+              const icon = themeToggle.querySelector('i');
+
+              if (body.classList.contains('light-theme')) {
+                  icon.className = 'fas fa-moon';
+              } else {
+                  icon.className = 'fas fa-sun';
+              }
+          });
+
+          // Audio controls
+          const playBtn = document.getElementById('playBtn');
+          const soundtrack = document.getElementById('soundtrack');
+          let isPlaying = false;
+
+          playBtn.addEventListener('click', () => {
+              if (isPlaying) {
+                  soundtrack.pause();
+                  playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                  isPlaying = false;
+              } else {
+                  soundtrack.play();
+                  playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                  isPlaying = true;
+              }
+          });
+
+          // Fade in animation on scroll
+          function handleScrollAnimations() {
+              const elements = document.querySelectorAll('.fade-in');
+
+              elements.forEach(element => {
+                  const elementTop = element.getBoundingClientRect().top;
+                  const elementVisible = 150;
+
+                  if (elementTop < window.innerHeight - elementVisible) {
+                      element.classList.add('visible');
+                  }
+              });
+          }
+
+          window.addEventListener('scroll', handleScrollAnimations);
+
+          // Handle URL hash on page load
+          window.addEventListener('load', () => {
+              const hash = window.location.hash.substring(1);
+              if (hash) {
+                  setTimeout(() => {
+                      scrollToSection(hash);
+                  }, 100);
+              }
+
+              // Trigger initial scroll animations
+              handleScrollAnimations();
+          });
+
+          // Handle hash changes
+          window.addEventListener('hashchange', () => {
+              const hash = window.location.hash.substring(1);
+              if (hash) {
+                  scrollToSection(hash);
+              }
+          });
+
+          // Keyboard navigation
+          document.addEventListener('keydown', (e) => {
+              if (e.key === 'Escape') {
+                  closeLightbox();
+                  mobileMenu.classList.remove('open');
+              }
+          });
+
+          // Interactive verse highlighting
+          document.querySelectorAll('.verse-line').forEach(line => {
+              line.addEventListener('click', () => {
+                  line.style.background = 'rgba(0, 255, 195, 0.3)';
+                  line.style.borderLeftColor = 'var(--neon-cyan)';
+                  line.style.borderLeftWidth = '5px';
+
+                  setTimeout(() => {
+                      line.style.background = '';
+                      line.style.borderLeftWidth = '3px';
+                  }, 1000);
+              });
+          });
+      </script>
+  </body>
+
+  </html>
